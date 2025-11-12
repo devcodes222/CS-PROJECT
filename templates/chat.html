@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="chat-container" style="display: flex; height: 100vh;">
+  <!-- Chat Messages Panel -->
+  <div id="message-panel" style="flex: 1; padding: 20px; overflow-y: auto;">
+    <!-- Messages will appear here -->
+  </div>
+
+  <!-- Active Users Sidebar -->
+  <aside id="users-sidebar" style="width: 200px; border-left: 1px solid #ccc; padding: 20px;">
+    <h3>Active Users</h3>
+    <ul id="user-list"></ul>
+  </aside>
+</div>
+
+<!-- Message Input and Typing Indicator -->
+<div id="input-area" style="position: fixed; bottom: 0; width: 100%; display: flex; padding: 10px; background: #f1f1f1;">
+  <form id="message-form" style="flex: 1; display: flex;">
+    <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off" style="flex: 1; padding: 10px;" />
+    <button type="submit">Send</button>
+  </form>
+</div>
+<div id="typing-indicator" style="font-style: italic; color: gray; padding-left: 10px; margin-top: 5px;"></div>
+{% endblock %}
